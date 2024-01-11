@@ -1,0 +1,283 @@
+.thisOutside {
+  width: 80vw;
+  position: absolute;
+  top: 11.5vh;
+  left: calc(20vw / 2);
+  //background-color: rgba(0, 0, 0, 0.2);
+  //display: none;
+}
+
+.outsideTop {
+  height: 85vh;
+  position: relative;
+  top: 5vh;
+  //left: 8vw;
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  padding-top: 2vh;
+  color: #fff;
+  font-family: "幼圆", serif;
+  letter-spacing: 5px;
+
+  & .avatar {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid #e6e6e6;
+    border-radius: 50%;
+  }
+
+  & .arrowhead {
+    width: 4vw;
+    height: 3vw;
+    position: absolute;
+    bottom: 12vh;
+    opacity: 0.6;
+    cursor: pointer;
+    animation: instructions 2s infinite;
+  }
+
+  & h1 {
+    margin-top: 5vh;
+  }
+
+  & h3 {
+    width: 60vw;
+    word-wrap: break-word;
+    margin-top: 5vh;
+  }
+}
+
+@keyframes instructions {
+  0% {
+    bottom: 12vh;
+  }
+  50% {
+    bottom: 10vh;
+  }
+  100% {
+    bottom: 12vh;
+  }
+}
+
+.subject {
+  height: 85vh;
+  position: sticky;
+  top: 12vh;
+}
+
+
+.el-tabs {
+  width: 80vw;
+  height: 94%;
+  padding-top: 3vh;
+  padding-left: 3vh;
+  //letter-spacing: 2px;
+
+  & .el-tabs__item {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #e6e6e6;
+    margin-bottom: 5vh;
+
+    &:hover, &.is-active {
+      color: #475669;
+    }
+  }
+
+  & .el-tabs__active-bar {
+    background-color: #475669;
+  }
+
+  & > .el-tabs__content {
+    padding: 3vh;
+    color: #475669;
+    //font-size: 5vh;
+    //font-weight: bold;
+  }
+
+  &:first-child img {
+    width: 8vw;
+    height: 8vw;
+    border: 2px solid #fff;
+    border-radius: 20px;
+  }
+
+  &:first-child h3 {
+    font-size: 5vh;
+    position: absolute;
+    top: -3vh;
+    left: 11vw;
+  }
+
+  &:first-child .levelDivider {
+    width: 60vw;
+    position: absolute;
+    top: 8vh;
+    left: 11vw;
+  }
+
+  &:first-child p {
+    font-size: 2vh;
+    font-weight: bold;
+    position: absolute;
+    top: 12vh;
+    left: 12vw;
+  }
+}
+
+.editProfile {
+  letter-spacing: 2px;
+  position: relative;
+  top: -3vh;
+
+  & .el-tabs__item {
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+  }
+}
+
+.basicSettings {
+  height: 300px;
+
+  & input[type = text] {
+    width: 300px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: "幼圆", serif;
+    padding-left: 10px;
+  }
+
+  & textarea {
+    width: 300px;
+    height: 150px;
+    resize: none;
+    outline: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: "幼圆", serif;
+
+    &::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.42);
+      position: absolute;
+      top: 10px;
+    }
+  }
+
+  & .el-button {
+    width: 15vw;
+    position: absolute;
+    top: 38vh;
+    left: 8vw;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+}
+
+.avatarUploader {
+  position: relative;
+  top: -28vh;
+  left: 35vw;
+  cursor: pointer;
+
+  & .el-icon {
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 5vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.loginBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+
+  & .border {
+    position: relative;
+
+    & input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      outline: none;
+    }
+
+    & label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+
+    & input:focus ~ label, & input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #03e9f4;
+      font-size: 10px;
+    }
+  }
+}
+
+.button {
+  border: 3px solid #4CAF50;
+  border-radius: 4px;
+  color: white;
+  background-color: transparent;
+  padding: 0 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5px 45px;
+  cursor: pointer;
+  position: relative;
+  left: 20%;
+
+  &:hover {
+    box-shadow: 10px 10px 100px 8px rgba(214, 214, 214, 1.0);
+    border: 3px solid #409343;
+  }
+}
+
+.enroll {
+  position: absolute;
+  bottom: 5vh;
+  right: 4vw;
+  color: #fff;
+  font-family: "幼圆", serif;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  &:hover {
+    color: #d3dce6;
+    cursor: pointer;
+  }
+}
+
+#enroll {
+  display: none;
+}
+

@@ -1,0 +1,89 @@
+#ikun{
+  position: fixed;
+  border-bottom: 2px solid #e6e6e6;
+  left: 2vw;
+  z-index: 90;
+}
+#nav {
+  width: 96vw;
+  height: 10vh;
+}
+#thisLogo {
+  width: 11vw;
+  height: 10vh;
+  position: fixed;
+  left: 5vw;
+}
+#navLogo {
+  width: 6vh;
+  height: 6vh;
+  position: fixed;
+  top: 2vh;
+}
+
+#navName {
+  font-size: 4vh;
+  font-family: "幼圆", serif;
+  color: #e6e6e6;
+  position: relative;
+  top: -2vh;
+  left: 3.5vw;
+}
+
+nav{
+  position: fixed;
+  z-index: 100;
+}
+#navRight{
+  position: fixed;
+  left: 0;
+}
+#navRight label{
+  height: 7vh;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: "幼圆", serif;
+  color: #e6e6e6;
+  width: calc((96vw - 11vw) / 8);
+  text-align: center;
+  position: relative;
+  float: left;
+  top: -1vh;
+  left: 20vw;
+  padding-top: 4vh;
+  &:hover{
+    background: rgba(0,0,0,0.2);
+  }
+}
+#find{
+  height: 5vh;
+  font-family: "幼圆", serif;
+  color: #e6e6e6;
+  border-radius: 20vw;
+  position: absolute;
+  top: 1.5vh;
+  right: -40vw;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 2vh;
+  letter-spacing: 0.2vh;
+  padding-left: 1vh;
+  border: 2px solid #e6e6e6;
+  transition: width 1s;
+  &:focus{
+    width: 20vw;
+    border: 2px solid #e6e6e6;
+    outline:none;
+  }
+}
+::placeholder {
+  color: #e6e6e6;
+}
+
+#home , #myMusic , #concern , #mv , #personalCenter{
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
