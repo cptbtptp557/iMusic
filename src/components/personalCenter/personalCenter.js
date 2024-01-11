@@ -101,7 +101,7 @@ export const personalCenter = () => {
     }
 
     // 将token返回给后端
-    const getCookieToken = document.cookie.split(";").find(c => c.startsWith("token=")).split("=")[1];
+    const getCookieToken = document.cookie.split(";")[0].split("=")[1];
     (async () => {
         if (getCookieToken) {
             await getPlayListsData().haveTokenLogin(getCookieToken);

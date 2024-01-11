@@ -52,7 +52,7 @@ import {shallowRef} from "vue";
 const current = shallowRef(home);
 
 const jump = () => {
-  const getCookieToken = document.cookie.split(";").find(c => c.startsWith("token=")).split("=")[1];
+  const getCookieToken = document.cookie.split(";")[0].split("=")[1];
   if (!getCookieToken) {
     current.value = personalCenter;
   }

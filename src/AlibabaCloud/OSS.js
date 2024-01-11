@@ -34,7 +34,7 @@ export const alibabaCloud_OSS = () => {
         if (!event) return;
         try {
             const result = await client.put(`${account}`, event);
-            console.log('图片上传成功', result);
+            console.log('图片上传成功:', result);
         } catch (err) {
             console.error('图片上传失败', err);
         }
